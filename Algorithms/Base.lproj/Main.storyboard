@@ -413,9 +413,200 @@
                     <view key="view" contentMode="scaleToFill" id="Bkr-SF-jpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lab4Task1" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-FW-Rds">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="IKo-Xz-g2J"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Метод половинного ділення" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65t-rd-kXG">
+                                <rect key="frame" x="47.333333333333343" y="80" width="319.33333333333326" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="igO-Ua-dPa">
+                                <rect key="frame" x="0.0" y="120" width="414" height="500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Початкова точка:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-dE-egb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arg-Bp-Y2C">
+                                        <rect key="frame" x="0.0" y="30.333333333333343" width="414" height="35"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введіть значення А  (default =  0)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Tf-fS-dgi">
+                                                <rect key="frame" x="60" y="0.0" width="324" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6Tf-fS-dgi" firstAttribute="top" secondItem="arg-Bp-Y2C" secondAttribute="top" id="4Ut-C8-SaK"/>
+                                            <constraint firstAttribute="height" constant="35" id="6kp-NS-6Xj"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Tf-fS-dgi" secondAttribute="trailing" constant="30" id="D85-jw-034"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Tf-fS-dgi" secondAttribute="bottom" id="EzR-vG-NiD"/>
+                                            <constraint firstItem="6Tf-fS-dgi" firstAttribute="leading" secondItem="arg-Bp-Y2C" secondAttribute="leading" constant="60" id="lpx-nU-cCk"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Кінцева точка:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEs-eL-Bnk">
+                                        <rect key="frame" x="0.0" y="75.333333333333343" width="414" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-kj-Bje">
+                                        <rect key="frame" x="0.0" y="105.66666666666666" width="414" height="35"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введіть значення B (default =  3)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-Eo-j8e">
+                                                <rect key="frame" x="60" y="0.0" width="324" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="6FN-rv-cDh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xe5-Eo-j8e" secondAttribute="bottom" id="VjE-rc-JQb"/>
+                                            <constraint firstItem="Xe5-Eo-j8e" firstAttribute="leading" secondItem="2BI-kj-Bje" secondAttribute="leading" constant="60" id="bHx-lh-teU"/>
+                                            <constraint firstItem="Xe5-Eo-j8e" firstAttribute="top" secondItem="2BI-kj-Bje" secondAttribute="top" id="r8J-n9-WV1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xe5-Eo-j8e" secondAttribute="trailing" constant="30" id="uHd-N8-gF7"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Точність:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-pI-2mU">
+                                        <rect key="frame" x="0.0" y="150.66666666666669" width="414" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-TS-59m">
+                                        <rect key="frame" x="0.0" y="181" width="414" height="35"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введіть значення epsilon (default =  0.001)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PoU-KV-wJQ">
+                                                <rect key="frame" x="60" y="0.0" width="324" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PoU-KV-wJQ" firstAttribute="top" secondItem="h4B-TS-59m" secondAttribute="top" id="1Hu-VO-zUb"/>
+                                            <constraint firstAttribute="height" constant="35" id="8X7-DQ-BDP"/>
+                                            <constraint firstAttribute="bottom" secondItem="PoU-KV-wJQ" secondAttribute="bottom" id="IP3-nu-8A5"/>
+                                            <constraint firstItem="PoU-KV-wJQ" firstAttribute="leading" secondItem="h4B-TS-59m" secondAttribute="leading" constant="60" id="deI-Ah-kaw"/>
+                                            <constraint firstAttribute="trailing" secondItem="PoU-KV-wJQ" secondAttribute="trailing" constant="30" id="h6h-au-gWI"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Можливі проміжкі:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3v-lY-cdx">
+                                        <rect key="frame" x="0.0" y="226" width="414" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPo-fh-BfI">
+                                        <rect key="frame" x="0.0" y="256.33333333333331" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sa-Fg-AKk">
+                                                <rect key="frame" x="201" y="14.999999999999998" width="12.333333333333343" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3sa-Fg-AKk" firstAttribute="centerY" secondItem="qPo-fh-BfI" secondAttribute="centerY" id="97q-vk-TsQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="n7D-GK-STw"/>
+                                            <constraint firstItem="3sa-Fg-AKk" firstAttribute="centerX" secondItem="qPo-fh-BfI" secondAttribute="centerX" id="pmI-Gl-ldg"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Результат:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-AG-b9b">
+                                        <rect key="frame" x="0.0" y="316.33333333333331" width="414" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-bS-0UR">
+                                        <rect key="frame" x="0.0" y="346.66666666666669" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="f(x) = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtU-v0-Nxo">
+                                                <rect key="frame" x="184" y="14.999999999999998" width="46" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7rd-Ah-mXF"/>
+                                            <constraint firstItem="KtU-v0-Nxo" firstAttribute="centerX" secondItem="6VW-bS-0UR" secondAttribute="centerX" id="EuL-7W-9wh"/>
+                                            <constraint firstItem="KtU-v0-Nxo" firstAttribute="centerY" secondItem="6VW-bS-0UR" secondAttribute="centerY" id="gog-GH-e3q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frc-bk-DSZ">
+                                        <rect key="frame" x="0.0" y="406.66666666666663" width="414" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh0-3U-6iC">
+                                                <rect key="frame" x="132" y="10" width="150" height="40"/>
+                                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="Wxd-re-Joa"/>
+                                                    <constraint firstAttribute="height" constant="40" id="sKz-hJ-JFu"/>
+                                                </constraints>
+                                                <state key="normal" title="Знайти точку">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didPressGetResult:" destination="GD6-QS-kYm" eventType="touchUpInside" id="fjE-5y-4aH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="KGL-kp-p9o"/>
+                                            <constraint firstItem="Bh0-3U-6iC" firstAttribute="centerY" secondItem="frc-bk-DSZ" secondAttribute="centerY" id="RTe-nQ-DAU"/>
+                                            <constraint firstItem="Bh0-3U-6iC" firstAttribute="centerX" secondItem="frc-bk-DSZ" secondAttribute="centerX" id="zWh-Vl-sUb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svg-2x-loG">
+                                        <rect key="frame" x="0.0" y="476.66666666666663" width="414" height="23.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="reb-tK-YZf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="65t-rd-kXG" firstAttribute="top" secondItem="ehk-FW-Rds" secondAttribute="bottom" constant="10" id="3XD-AD-qMS"/>
+                            <constraint firstItem="baw-1k-LRY" firstAttribute="trailing" secondItem="ehk-FW-Rds" secondAttribute="trailing" id="9O2-ey-sbE"/>
+                            <constraint firstItem="ehk-FW-Rds" firstAttribute="leading" secondItem="baw-1k-LRY" secondAttribute="leading" id="A1u-Eg-yg2"/>
+                            <constraint firstItem="igO-Ua-dPa" firstAttribute="leading" secondItem="Bkr-SF-jpP" secondAttribute="leading" id="I3f-L5-3JC"/>
+                            <constraint firstItem="baw-1k-LRY" firstAttribute="trailing" secondItem="igO-Ua-dPa" secondAttribute="trailing" id="JlA-gF-fFN"/>
+                            <constraint firstItem="igO-Ua-dPa" firstAttribute="top" secondItem="65t-rd-kXG" secondAttribute="bottom" constant="10" id="Ojy-Gr-zqD"/>
+                            <constraint firstItem="ehk-FW-Rds" firstAttribute="top" secondItem="baw-1k-LRY" secondAttribute="top" id="hk3-UW-x28"/>
+                            <constraint firstItem="65t-rd-kXG" firstAttribute="centerX" secondItem="baw-1k-LRY" secondAttribute="centerX" id="iM7-qT-6LB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="baw-1k-LRY"/>
                     </view>
+                    <connections>
+                        <outlet property="aTextField" destination="6Tf-fS-dgi" id="WI4-O6-lou"/>
+                        <outlet property="bTextField" destination="Xe5-Eo-j8e" id="SKc-Np-18W"/>
+                        <outlet property="epsilonTextField" destination="PoU-KV-wJQ" id="KNd-Jp-dIp"/>
+                        <outlet property="possiblePointsLabel" destination="3sa-Fg-AKk" id="TPc-rF-uhc"/>
+                        <outlet property="resultLabel" destination="KtU-v0-Nxo" id="Xbe-Wy-mbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3s-0H-pCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1028,5 +1219,6 @@
         <image name="lab1Task2" width="588" height="216"/>
         <image name="lab1Task3" width="466" height="154"/>
         <image name="lab3Task1" width="976" height="120"/>
+        <image name="lab4Task1" width="1228" height="156"/>
     </resources>
 </document>

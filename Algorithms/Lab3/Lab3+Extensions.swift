@@ -8,29 +8,28 @@
 
 import UIKit
 
+
 enum AviableFormuls: String {
     case variant = "sin(x^2) * e^((-x/2)^2)"
     case sinx = "sin(x)"
 }
 
+
 extension UIViewController {
     
-    func aitkenFormula(x: [Double], y: [Double], x0: Double) -> Double {
+    
+    func aitkenFormula(xArray: [Double], yArray: [Double], x0Point: Double) -> Double {
         
-        let n = x.count
-        var p: [Double] = []
+        let nCount = xArray.count
+        var p = Array(repeating: 0.0, count: nCount)
         
-        for _ in 0..<n {
-            p.append(contentsOf: [0])
-        }
-        
-        for k in 0..<n {
-            let some = n - k
+        for k in 0..<nCount {
+            let some = nCount - k
             for i in 0..<some {
                 if k == 0 {
-                    p[i] = y[i]
+                    p[i] = yArray[i]
                 } else {
-                    p[i] = ((x0-x[i+k])*p[i]+(x[i]-x0)*p[i+1])/(x[i]-x[i+k])
+                    p[i] = ((x0Point - xArray[i+k]) * p[i] + (xArray[i] - x0Point) * p[i+1]) / (xArray[i] - xArray[i+k])
                 }
             }
         }
@@ -68,7 +67,7 @@ extension UIViewController {
         var yResult: [Double] = []
         
         for x in xTest {
-            yResult.append(aitkenFormula(x: xTeoretical, y: yTeoretical, x0: x))
+            yResult.append(aitkenFormula(xArray: xTeoretical, yArray: yTeoretical, x0Point: x))
         }
 
         return (x: xTest, y: yResult)
@@ -79,7 +78,7 @@ extension UIViewController {
         
         let (xTeoretical, yTeoretical) = getFormulaData(formula: .variant, a: a, b: b, count: countOfInterpolation)
 
-        let y = aitkenFormula(x: xTeoretical, y: yTeoretical, x0: x)
+        let y = aitkenFormula(xArray: xTeoretical, yArray: yTeoretical, x0Point: x)
         
         return y
     }

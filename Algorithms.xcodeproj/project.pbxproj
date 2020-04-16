@@ -14,6 +14,7 @@
 		5FCAB0E5244738DF0012A7AF /* Lab3ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E3244738DF0012A7AF /* Lab3ErrorTableViewCell.swift */; };
 		5FCAB0E6244738DF0012A7AF /* Lab3ErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E4244738DF0012A7AF /* Lab3ErrorTableViewCell.xib */; };
 		5FCAB0E9244743D00012A7AF /* Lab4MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E8244743D00012A7AF /* Lab4MainViewController.swift */; };
+		5FE130B82447569300856891 /* Lab4+Extenisons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE130B72447569300856891 /* Lab4+Extenisons.swift */; };
 		710E32EA23FAA804003D07CB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E32E923FAA804003D07CB /* TaskViewController.swift */; };
 		710E32EC23FAAA56003D07CB /* Lab1Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E32EB23FAAA56003D07CB /* Lab1Task1ViewController.swift */; };
 		710E32EE23FAACA4003D07CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E32ED23FAACA4003D07CB /* Extension.swift */; };
@@ -41,6 +42,7 @@
 		5FCAB0E3244738DF0012A7AF /* Lab3ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3ErrorTableViewCell.swift; sourceTree = "<group>"; };
 		5FCAB0E4244738DF0012A7AF /* Lab3ErrorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lab3ErrorTableViewCell.xib; sourceTree = "<group>"; };
 		5FCAB0E8244743D00012A7AF /* Lab4MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab4MainViewController.swift; sourceTree = "<group>"; };
+		5FE130B72447569300856891 /* Lab4+Extenisons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lab4+Extenisons.swift"; sourceTree = "<group>"; };
 		710E32E923FAA804003D07CB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		710E32EB23FAAA56003D07CB /* Lab1Task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab1Task1ViewController.swift; sourceTree = "<group>"; };
 		710E32ED23FAACA4003D07CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5FCAB0E8244743D00012A7AF /* Lab4MainViewController.swift */,
+				5FE130B72447569300856891 /* Lab4+Extenisons.swift */,
 			);
 			path = Lab4;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				710E32EE23FAACA4003D07CB /* Extension.swift in Sources */,
 				5FCAB0E5244738DF0012A7AF /* Lab3ErrorTableViewCell.swift in Sources */,
 				5FC982D72446334B00BC1B19 /* Lab3MainViewController.swift in Sources */,
+				5FE130B82447569300856891 /* Lab4+Extenisons.swift in Sources */,
 				716F665523FAA4F700617843 /* AppDelegate.swift in Sources */,
 				7122FF612407C752006361F6 /* WtiteViewController.swift in Sources */,
 				71263C9C24095E42002106FC /* GraphicViewController.swift in Sources */,

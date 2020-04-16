@@ -88,6 +88,9 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
            if indexPath.row == 0 {
                guard let vc = mainStoryBoard.instantiateViewController(identifier: Lab4MainViewController.identifier) as? Lab4MainViewController else { return }
                self.navigationController?.pushViewController(vc, animated: true)
+            
+//            print("here")
+//            print(self.navigationController)
             }
         }
         
