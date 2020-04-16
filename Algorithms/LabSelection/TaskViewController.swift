@@ -54,6 +54,10 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
             let taskNames = ["Метод половинного ділення"]
             cell.textLabel?.text = taskNames[indexPath.row]
             return cell
+        } else if labName == "5" {
+            let taskNames = ["Метод Гауса з вибором головного елемента"]
+            cell.textLabel?.text = taskNames[indexPath.row]
+            return cell
         } else {
             return cell
         }
@@ -85,12 +89,14 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
                self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if labName == "4" {
-           if indexPath.row == 0 {
+            if indexPath.row == 0 {
                guard let vc = mainStoryBoard.instantiateViewController(identifier: Lab4MainViewController.identifier) as? Lab4MainViewController else { return }
                self.navigationController?.pushViewController(vc, animated: true)
-            
-//            print("here")
-//            print(self.navigationController)
+            }
+        } else if labName == "5" {
+            if indexPath.row == 0 {
+               guard let vc = mainStoryBoard.instantiateViewController(identifier: Lab5MainViewController.identifier) as? Lab5MainViewController else { return }
+               self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         
