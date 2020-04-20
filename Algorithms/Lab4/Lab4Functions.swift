@@ -11,13 +11,13 @@ import UIKit
 
 extension UIViewController {
     
+    //Отримання y за формулою
     func getYFromFormula(_ x: Double) -> Double{
         return pow(2, x) - 4 * x
     }
 
-
+    // Метод половинного ділення
     func myVariantMethod(pointA: Double, pointB: Double, epsilon: Double) -> (Double, Double) {
-        /// Half-split method
         var a = pointA
         var b = pointB
         var c = 0.0

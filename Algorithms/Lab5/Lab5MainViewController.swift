@@ -52,6 +52,7 @@ class Lab5MainViewController: UIViewController {
     }
     
     
+    // Отримання введеної матріці
     private func makeMatrix() -> (main: [[Double]], answer: [Double]) {
         
         let textFieldArrayMain: [[UITextField]] = [[x11TextField, x12TextField, x13TextField, x14TextField],
@@ -64,7 +65,6 @@ class Lab5MainViewController: UIViewController {
         var mainMatrix: [[Double]] = []
         var answerMatrix: [Double] = []
 
-        
         for i in 0..<textFieldArrayMain.count {
             let rowTextField = textFieldArrayMain[i]
             var row: [Double] = []
@@ -83,6 +83,7 @@ class Lab5MainViewController: UIViewController {
     }
     
 
+    // Отримання результату
     @IBAction func didPressGetResult(_ sender: UIButton) {
         data = makeMatrix()
         
@@ -99,33 +100,33 @@ class Lab5MainViewController: UIViewController {
     }
     
     
+    // Перевід значення з текстового поля у Double
     func getValueFromTextField(_ textField: UITextField) -> Double {
         let stringValue = textField.text ?? ""
         return Double(stringValue) ?? 0.0
     }
     
     
-    /**
-     Gauss algorithm
-     
-     - Parameter array : Start array
-     - Parameter arrayAnswers: Array with ansers
-     - Parameter numIter: Parametr for recursion
-     
-     */
+    // Метод Гауса з вибором головного елемента
+    // Прямий хід
     func gaussForward(array: [[Double]], arrayAnswers: [Double], startLine: Int = 0) -> [Double] {
         
-        /// Start revesing if all is done
         if startLine == array.count - 1 {
+            // Початок зворотнього ходу
             return gaussReverse(array: array, arrayAnswers: arrayAnswers)
         }
-                        
+        
+        // Массив основними значеннями
         var arrayToEdit: [[Double]] = array
+        
+        // Массив вільними коефіціентами
         var arrayAnswersToEdit: [Double] = arrayAnswers
         
-        let divider = arrayToEdit[startLine][startLine]
+        // Дільник
+        let valueDivider = arrayToEdit[startLine][startLine]
         
-        if divider == 0 {
+        if valueDivider == 0 {
+            // Перестановка рядків
             let rowNumberToInsert = findAbsMaxInColumn(arrayToEdit, column: startLine, startRow: startLine).rowNumber
             
             let lineToRemove = arrayToEdit.remove(at: rowNumberToInsert)
@@ -139,14 +140,15 @@ class Lab5MainViewController: UIViewController {
         
         for i in startLine + 1..<array.count {
             
-            let M = arrayToEdit[i][startLine] / divider
+            // Значення M
+            let M = arrayToEdit[i][startLine] / valueDivider
             
-            /// Remove lines and answer
+            // Видалення рядків та відповідей
             arrayToEdit.remove(at: i)
             arrayAnswersToEdit.remove(at: i)
             
-            /// Insert lines and answer
-            arrayToEdit.insert(makeStep(line: array[startLine], nextLine: array[i], M: M), at: i)
+            // Вставлення рядків та відповідей обчисленних за формулою
+            arrayToEdit.insert(countNextLine(line: array[startLine], nextLine: array[i], M: M), at: i)
             arrayAnswersToEdit.insert((arrayAnswers[i] - M * arrayAnswers[startLine]).rounded(digits: 8), at: i)
         }
         
@@ -154,36 +156,8 @@ class Lab5MainViewController: UIViewController {
     }
     
     
-    /**
-     Get new line from 2 lines
-     
-     - Parameter line: First line
-     - Parameter nextLine: Second line
-     - Parameter M: M
-     
-     */
-    func makeStep(line: [Double], nextLine: [Double], M: Double) -> [Double] {
-        
-        var result: [Double] = []
-        
-        for i in 0..<nextLine.count {
-            let elementOfNextLine = nextLine[i]
-            let elementOfCurrentLine = line[i]
-            
-            result.append((elementOfNextLine - M * elementOfCurrentLine).rounded(digits: 8))
-        }
-        return result
-    }
-
-    
-    /**
-     Reverse
-     
-     - Parameter array : End array
-     - Parameter arrayAnswers: Array with ansers
-     - Parameter M: M
-     
-     */
+    // Метод Гауса з вибором головного елемента
+    // Зворотній хід
     func gaussReverse(array: [[Double]], arrayAnswers: [Double]) -> [Double] {
         var resultArray: [Double] = Array(repeating: 0.0, count: array.count)
         
@@ -202,6 +176,18 @@ class Lab5MainViewController: UIViewController {
     }
     
     
+    // Обчислення наступного рядка за формулою
+    func countNextLine(line: [Double], nextLine: [Double], M: Double) -> [Double] {
+        var result: [Double] = []
+        
+        for i in 0..<nextLine.count {
+            result.append((nextLine[i] - M * line[i]).rounded(digits: 8))
+        }
+        return result
+    }
+    
+    
+    // Функція знаходження максимального абсолютного значення
     func findAbsMaxInColumn(_ dataArray: [[Double]], column: Int, startRow: Int = 0) -> (rowNumber: Int, maxValue: Double) {
 
         var rowNumber: Int = 0

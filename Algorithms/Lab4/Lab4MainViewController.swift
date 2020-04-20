@@ -23,21 +23,29 @@ class Lab4MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboard()
         getPossiblePoints()
         
         self.title = "Метод половинного ділення"
     }
     
     
+    // Знаходження всіх можливих проміжків
     private func getPossiblePoints() {
+        // Шаг
         let step = 0.5
-        var arrayWithPoints: [[Double]] = []
+        
+        // Массив з можливими проміжками
+        var arrayWithPoints: [(x: Double, y: Double)] = []
+        
+        // Початкова точка
         var startPoint = -10.0
 
+        // Кінцева точка
         while startPoint < 10.0 {
             if (getYFromFormula(startPoint) * getYFromFormula(startPoint + step) < 0) || (getYFromFormula(startPoint) == 0) {
-                arrayWithPoints.append([startPoint.rounded(digits: 4), (startPoint + step).rounded(digits: 4)])
+                // Якщо корінь на проміжку існує, додаємо його до массиву
+                arrayWithPoints.append((x: startPoint.rounded(digits: 4), y: (startPoint + step).rounded(digits: 4)))
             }
             startPoint += step
         }
@@ -46,14 +54,14 @@ class Lab4MainViewController: UIViewController {
     }
     
     
+    // Вивід результату
     @IBAction func didPressGetResult(_ sender: UIButton) {
         
         let a = Double(aTextField.text ?? "") ?? 0.0
-        
         let b = Double(bTextField.text ?? "") ?? 3.0
-        
         let epsilon = Double(epsilonTextField.text ?? "") ?? 0.001
         
+        // Знаходження кореня
         let (x, y) = myVariantMethod(pointA: a, pointB: b, epsilon: epsilon)
         
         resultLabel.text = "x = \(x.rounded(digits: 4)), y = \(y)"
