@@ -25,12 +25,14 @@ class Lab3ChartViewController: UIViewController, ChartViewDelegate{
 
     var selectedFormula: AviableFormuls = .variant
     
-    var allPointsData: (teoretical: (x: [Double], y: [Double]), test: (x: [Double], y: [Double]), error: (x: [Double], y: [Double]))?
+    var allPointsData: (teoreticalValues: (x: [Double], y: [Double]),
+                        testValues: (x: [Double], y: [Double]),
+                        errorValues: (x: [Double], y: [Double]))?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChartView()
-        allPointsData = getData(formula: selectedFormula, a: aFromSegue, b: bFromSegue, count: nFromSegue)
+        allPointsData = getFullData(aviableFormula: selectedFormula, a: aFromSegue, b: bFromSegue, count: nFromSegue)
         setupFunctionData()
     }
     
@@ -64,7 +66,7 @@ class Lab3ChartViewController: UIViewController, ChartViewDelegate{
     
     
     private func recalculate() {
-        allPointsData = getData(formula: selectedFormula, a: aFromSegue, b: bFromSegue, count: nFromSegue)
+        allPointsData = getFullData(aviableFormula: selectedFormula, a: aFromSegue, b: bFromSegue, count: nFromSegue)
         
         if chartAndErrorSegmentControl.selectedSegmentIndex == 0 {
             setupFunctionData()
@@ -80,17 +82,17 @@ class Lab3ChartViewController: UIViewController, ChartViewDelegate{
         
         guard let allPointsData = allPointsData else { return }
         
-        for i in 0..<allPointsData.teoretical.x.count {
-            teoreticalValues.append(ChartDataEntry(x: allPointsData.teoretical.x[i], y: allPointsData.teoretical.y[i]))
+        for i in 0..<allPointsData.teoreticalValues.x.count {
+            teoreticalValues.append(ChartDataEntry(x: allPointsData.teoreticalValues.x[i], y: allPointsData.teoreticalValues.y[i]))
         }
         
-        for i in 0..<allPointsData.test.x.count {
-            testValues.append(ChartDataEntry(x: allPointsData.test.x[i], y: allPointsData.test.y[i]))
+        for i in 0..<allPointsData.testValues.x.count {
+            testValues.append(ChartDataEntry(x: allPointsData.testValues.x[i], y: allPointsData.testValues.y[i]))
         }
 
         let teoreticalLine = LineChartDataSet(entries: teoreticalValues, label: "Теоретичні")
         
-        teoreticalLine.setColor(.blue)
+        teoreticalLine.setColor(.green)
         teoreticalLine.setCircleColor(.gray)
         teoreticalLine.lineWidth = 1.5
         teoreticalLine.circleRadius = 0
@@ -131,12 +133,13 @@ class Lab3ChartViewController: UIViewController, ChartViewDelegate{
             
         var errorValues: [ChartDataEntry] = []
         
-        for i in 0..<allPointsData.error.x.count {
-            let yPoint = -1 * log10(abs(allPointsData.error.y[i]))
+        for i in 0..<allPointsData.errorValues.x.count {
+            let yPoint = -1 * log10(abs(allPointsData.errorValues.y[i]))
             if yPoint.isFinite && !yPoint.isNaN {
-                errorValues.append(ChartDataEntry(x: allPointsData.error.x[i], y: yPoint))
+                errorValues.append(ChartDataEntry(x: allPointsData.errorValues.x[i], y: yPoint))
             }
         }
+        
         let errorLine = LineChartDataSet(entries: errorValues, label: "Оцінка похибки (Δn)")
     
         errorLine.setColor(.red)

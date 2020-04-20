@@ -10,11 +10,11 @@
 		5FC982D72446334B00BC1B19 /* Lab3MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC982D62446334B00BC1B19 /* Lab3MainViewController.swift */; };
 		5FCAB0DD244636720012A7AF /* Lab3ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0DC244636720012A7AF /* Lab3ChartViewController.swift */; };
 		5FCAB0DF244636860012A7AF /* Lab3ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0DE244636860012A7AF /* Lab3ErrorViewController.swift */; };
-		5FCAB0E1244638390012A7AF /* Lab3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E0244638390012A7AF /* Lab3+Extensions.swift */; };
+		5FCAB0E1244638390012A7AF /* Lab3Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E0244638390012A7AF /* Lab3Functions.swift */; };
 		5FCAB0E5244738DF0012A7AF /* Lab3ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E3244738DF0012A7AF /* Lab3ErrorTableViewCell.swift */; };
 		5FCAB0E6244738DF0012A7AF /* Lab3ErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E4244738DF0012A7AF /* Lab3ErrorTableViewCell.xib */; };
 		5FCAB0E9244743D00012A7AF /* Lab4MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAB0E8244743D00012A7AF /* Lab4MainViewController.swift */; };
-		5FE130B82447569300856891 /* Lab4+Extenisons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE130B72447569300856891 /* Lab4+Extenisons.swift */; };
+		5FE130B82447569300856891 /* Lab4Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE130B72447569300856891 /* Lab4Functions.swift */; };
 		5FE130BB2449101900856891 /* Lab5MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE130BA2449101900856891 /* Lab5MainViewController.swift */; };
 		710E32EA23FAA804003D07CB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E32E923FAA804003D07CB /* TaskViewController.swift */; };
 		710E32EC23FAAA56003D07CB /* Lab1Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E32EB23FAAA56003D07CB /* Lab1Task1ViewController.swift */; };
@@ -39,11 +39,11 @@
 		5FC982D62446334B00BC1B19 /* Lab3MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3MainViewController.swift; sourceTree = "<group>"; };
 		5FCAB0DC244636720012A7AF /* Lab3ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3ChartViewController.swift; sourceTree = "<group>"; };
 		5FCAB0DE244636860012A7AF /* Lab3ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3ErrorViewController.swift; sourceTree = "<group>"; };
-		5FCAB0E0244638390012A7AF /* Lab3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lab3+Extensions.swift"; sourceTree = "<group>"; };
+		5FCAB0E0244638390012A7AF /* Lab3Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3Functions.swift; sourceTree = "<group>"; };
 		5FCAB0E3244738DF0012A7AF /* Lab3ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3ErrorTableViewCell.swift; sourceTree = "<group>"; };
 		5FCAB0E4244738DF0012A7AF /* Lab3ErrorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lab3ErrorTableViewCell.xib; sourceTree = "<group>"; };
 		5FCAB0E8244743D00012A7AF /* Lab4MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab4MainViewController.swift; sourceTree = "<group>"; };
-		5FE130B72447569300856891 /* Lab4+Extenisons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lab4+Extenisons.swift"; sourceTree = "<group>"; };
+		5FE130B72447569300856891 /* Lab4Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab4Functions.swift; sourceTree = "<group>"; };
 		5FE130BA2449101900856891 /* Lab5MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab5MainViewController.swift; sourceTree = "<group>"; };
 		710E32E923FAA804003D07CB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		710E32EB23FAAA56003D07CB /* Lab1Task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab1Task1ViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				5FC982D62446334B00BC1B19 /* Lab3MainViewController.swift */,
 				5FCAB0DC244636720012A7AF /* Lab3ChartViewController.swift */,
 				5FCAB0DE244636860012A7AF /* Lab3ErrorViewController.swift */,
-				5FCAB0E0244638390012A7AF /* Lab3+Extensions.swift */,
+				5FCAB0E0244638390012A7AF /* Lab3Functions.swift */,
 			);
 			path = Lab3;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5FCAB0E8244743D00012A7AF /* Lab4MainViewController.swift */,
-				5FE130B72447569300856891 /* Lab4+Extenisons.swift */,
+				5FE130B72447569300856891 /* Lab4Functions.swift */,
 			);
 			path = Lab4;
 			sourceTree = "<group>";
@@ -328,12 +328,12 @@
 				710E32EC23FAAA56003D07CB /* Lab1Task1ViewController.swift in Sources */,
 				716F665923FAA4F700617843 /* ViewController.swift in Sources */,
 				710E32EA23FAA804003D07CB /* TaskViewController.swift in Sources */,
-				5FCAB0E1244638390012A7AF /* Lab3+Extensions.swift in Sources */,
+				5FCAB0E1244638390012A7AF /* Lab3Functions.swift in Sources */,
 				710E32EE23FAACA4003D07CB /* Extension.swift in Sources */,
 				5FCAB0E5244738DF0012A7AF /* Lab3ErrorTableViewCell.swift in Sources */,
 				5FC982D72446334B00BC1B19 /* Lab3MainViewController.swift in Sources */,
 				5FE130BB2449101900856891 /* Lab5MainViewController.swift in Sources */,
-				5FE130B82447569300856891 /* Lab4+Extenisons.swift in Sources */,
+				5FE130B82447569300856891 /* Lab4Functions.swift in Sources */,
 				716F665523FAA4F700617843 /* AppDelegate.swift in Sources */,
 				7122FF612407C752006361F6 /* WtiteViewController.swift in Sources */,
 				71263C9C24095E42002106FC /* GraphicViewController.swift in Sources */,

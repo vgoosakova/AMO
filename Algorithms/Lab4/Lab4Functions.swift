@@ -24,7 +24,6 @@ extension UIViewController {
 
         if getYFromFormula(a) * getYFromFormula(b) > 0 {
             return (0, 0)
-
         } else if getYFromFormula(a) == 0 {
             return (a, getYFromFormula(a))
         } else if getYFromFormula(b) == 0 {

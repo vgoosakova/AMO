@@ -24,13 +24,13 @@ class Lab4MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getPossiblePonits()
+        getPossiblePoints()
         
-        self.title = "Лабораторна №4"
+        self.title = "Метод половинного ділення"
     }
     
     
-    private func getPossiblePonits() {
+    private func getPossiblePoints() {
         let step = 0.5
         var arrayWithPoints: [[Double]] = []
         var startPoint = -10.0

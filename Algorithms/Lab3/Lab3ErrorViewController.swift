@@ -16,6 +16,7 @@ class Lab3ErrorViewController: UIViewController {
     
     var errorData: [(n: Int, deltaN: Double, deltaExactN: Double, k: Double)] = []
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,14 +34,13 @@ class Lab3ErrorViewController: UIViewController {
     }
     
     
-    
     private func getDeltaN(x: Double, n: Int) -> [(n: Int, deltaN: Double, deltaExactN: Double, k: Double)] {
         var resultDelta: [(n: Int, deltaN: Double, deltaExactN: Double, k: Double)] = []
         
         for n in 1...n {
-            let inteerpolatedN = getInternolatedYPoint(a: 0, b: 3, countOfInterpolation: n, x: x)
+            let inteerpolatedN = internolatedYPoint(a: 0, b: 3, countOfInterpolation: n, x: x)
             
-            let inteerpolatedNPlus1 = getInternolatedYPoint(a: 0, b: 3, countOfInterpolation: n + 1, x: x)
+            let inteerpolatedNPlus1 = internolatedYPoint(a: 0, b: 3, countOfInterpolation: n + 1, x: x)
             
             let valueFormula = sin(pow(pointFromSegue, 2)) * exp(pow((pointFromSegue / 2), 2))
 
@@ -53,25 +53,29 @@ class Lab3ErrorViewController: UIViewController {
         
         return resultDelta
     }
-
 }
 
 
 extension Lab3ErrorViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return errorData.count + 1
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Lab3ErrorTableViewCell.identifier)  as? Lab3ErrorTableViewCell else { return UITableViewCell() }
-        
         
         if indexPath.row ==  0 {
             cell.nLabel.text = "N"
@@ -80,7 +84,6 @@ extension Lab3ErrorViewController: UITableViewDelegate, UITableViewDataSource {
             cell.kLabel.text = "k"
             return cell
         } else {
-            
             let row = errorData[indexPath.row - 1]
 
             cell.nLabel.text = "\(row.n)"
@@ -91,7 +94,4 @@ extension Lab3ErrorViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
 }

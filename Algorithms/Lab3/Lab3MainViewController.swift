@@ -22,7 +22,7 @@ class Lab3MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
-        self.title = "Лабораторна №3"
+        self.title = "Схема Ейткена"
     }
     
     
@@ -49,6 +49,4 @@ class Lab3MainViewController: UIViewController {
         
         self.navigationController?.pushViewController(errorVC, animated: true)
     }
-    
-
 }
